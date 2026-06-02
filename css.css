@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f4f4;
+  color: #111;
+  font-family: "Arial", sans-serif;
+}
+
+/* PORTADA */
+
+.portada {
+  min-height: 280px;
+  background:
+    radial-gradient(circle at left, rgba(180, 220, 225, 0.5), transparent 30%),
+    linear-gradient(120deg, #ffffff, #eaf6f7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #c9e5e8;
+}
+
+.portada h1 {
+  font-size: 90px;
+  letter-spacing: 18px;
+  font-weight: 300;
+  animation: aparecer 1.5s ease;
+}
+
+.linea {
+  width: 55%;
+  height: 7px;
+  background: #a9dce2;
+  margin: 15px 0;
+}
+
+.portada p {
+  font-size: 15px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+/* INTRO */
+
+.intro {
+  padding: 70px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.texto-intro {
+  max-width: 900px;
+  text-align: center;
+}
+
+.texto-intro span {
+  font-size: 100px;
+  color: #a9dce2;
+}
+
+.texto-intro h2 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.texto-intro p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* BLOQUES */
+
+.bloque {
+  width: 92%;
+  margin: 80px auto;
+  padding: 45px;
+  background: #ffffff;
+  position: relative;
+}
+
+.revista {
+  box-shadow: 18px 18px 0 #c7eef0;
+}
+
+.video-web {
+  box-shadow: 18px 18px 0 #f4c7d3;
+}
+
+.titulo-bloque {
+  margin-bottom: 30px;
+}
+
+.titulo-bloque p {
+  font-size: 14px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #6d6d6d;
+}
+
+.titulo-bloque h2 {
+  font-size: 54px;
+  letter-spacing: 6px;
+  font-weight: 300;
+  text-transform: uppercase;
+  animation: flotar 3s infinite ease-in-out;
+}
+
+/* MARCOS GRANDES */
+
+.marco {
+  width: 100%;
+  padding: 12px;
+  background: #ffffff;
+  border: 3px solid #a9dce2;
+  position: relative;
+}
+
+.marco iframe {
+  width: 100%;
+  height: 760px;
+  border: none;
+  display: block;
+}
+
+.marco video {
+  width: 100%;
+  height: 760px;
+  object-fit: contain;
+  background: #000;
+  display: block;
+}
+
+/* BORDE ANIMADO */
+
+.animado {
+  animation: bordeBrillante 4s infinite linear;
+}
+
+@keyframes bordeBrillante {
+  0% {
+    border-color: #a9dce2;
+    box-shadow: 0 0 10px #a9dce2;
+  }
+
+  50% {
+    border-color: #f4a7b9;
+    box-shadow: 0 0 25px #f4a7b9;
+  }
+
+  100% {
+    border-color: #a9dce2;
+    box-shadow: 0 0 10px #a9dce2;
+  }
+}
+
+/* ANIMACIONES */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    letter-spacing: 35px;
+  }
+
+  to {
+    opacity: 1;
+    letter-spacing: 18px;
+  }
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* FOOTER */
+
+footer {
+  padding: 35px;
+  text-align: center;
+  background: #e8e8e8;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 900px) {
+  .portada h1 {
+    font-size: 48px;
+    letter-spacing: 10px;
+  }
+
+  .texto-intro h2 {
+    font-size: 34px;
+  }
+
+  .titulo-bloque h2 {
+    font-size: 36px;
+  }
+
+  .marco iframe,
+  .marco video {
+    height: 500px;
+  }
+
+  .bloque {
+    padding: 25px;
+  }
+}
+.institucion {
+  width: 100%;
+  padding: 18px 20px;
+  background: linear-gradient(90deg, #111111, #d9f3f4, #111111);
+  text-align: center;
+}
+
+.institucion p {
+  color: #111111;
+  background: #ffffff;
+  display: inline-block;
+  padding: 10px 35px;
+  border: 2px solid #a9dce2;
+  font-size: 16px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  box-shadow: 6px 6px 0 #f4c7d3;
+}
+
+.equipo {
+  width: 92%;
+  margin: 90px auto;
+  padding: 60px 40px;
+  background:
+    linear-gradient(135deg, rgba(169,220,226,0.35), transparent),
+    #ffffff;
+  border: 2px solid #a9dce2;
+  box-shadow: 18px 18px 0 #f4c7d3;
+  text-align: center;
+}
+
+.subtitulo-equipo {
+  font-size: 13px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.equipo h2 {
+  font-size: 48px;
+  font-weight: 300;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.lista-equipo {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.integrante {
+  min-width: 260px;
+  padding: 22px;
+  background: #ffffff;
+  border: 2px solid #111111;
+  font-size: 18px;
+  letter-spacing: 1px;
+  box-shadow: 8px 8px 0 #a9dce2;
+  transition: 0.3s;
+}
+
+.integrante:hover {
+  transform: translateY(-8px);
+  box-shadow: 8px 8px 0 #f4c7d3;
+}
+.video-local{
+    width:100%;
+    height:760px;
+    display:block;
+    background:#000;
+    border:none;
+    object-fit:contain;
+}
